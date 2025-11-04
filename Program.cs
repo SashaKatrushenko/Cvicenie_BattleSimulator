@@ -5,11 +5,11 @@
         static void Main(string[] args)
         {
             Hero ourHero = new Hero();
-            Monster monster1 = new Monster("Goblin", 150, 3);
+            Monster monster1 = new Monster("Goblin", 150, 19);
         
 
-            int HeroHpAfterFight = ourHero.HP - monster1.DMG;
-            ourHero.HP = HeroHpAfterFight;
+          //  int HeroHpAfterFight = ourHero.HP - monster1.DMG;
+          // ourHero.HP = HeroHpAfterFight;
 
 
             while (true)
@@ -40,7 +40,7 @@
                     Console.WriteLine("Monster is dead! =D");
                     break;
                 }
-                
+               
             }
 
 

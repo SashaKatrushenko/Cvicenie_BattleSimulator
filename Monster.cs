@@ -22,7 +22,16 @@ namespace Cvicenie_BattleSimulator
 
         public void MonsterAttak(Hero hero)
         {
-            hero.HP = hero.HP - DMG;
+            int finalDMG = DMG - hero.ARM;
+            if (finalDMG < 0)
+            {
+                finalDMG = 0;
+            }
+            hero.HP = hero.HP - finalDMG;
+            if (hero.HP < 0)
+            {
+                hero.HP = 0;
+            }
         }
     }
 }
