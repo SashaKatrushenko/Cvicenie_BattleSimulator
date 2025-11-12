@@ -9,7 +9,7 @@ namespace Cvicenie_BattleSimulator
 {
     public class Monster
     {
-        public string RaceType { get; set; }   //Monster race type (troll, goblin, org)
+        public string RaceType { get; set; }   //Monster race type (troll, goblin, ork)
         public int HP { get; set; }      //Health
         public int DMG { get; set; }     //Damage
 
@@ -22,7 +22,7 @@ namespace Cvicenie_BattleSimulator
 
         public void MonsterAttak(Hero hero)
         {
-            int finalDMG = DMG - hero.ARM;
+           /* int finalDMG = DMG - hero.ARM;
             if (finalDMG < 0)
             {
                 finalDMG = 0;
@@ -31,6 +31,11 @@ namespace Cvicenie_BattleSimulator
             if (hero.HP < 0)
             {
                 hero.HP = 0;
+            }
+          */   if (hero.ARM < DMG)
+            {
+                int vysledny_damage = DMG - hero.ARM;
+                hero.HP = hero.HP - vysledny_damage;
             }
         }
     }
